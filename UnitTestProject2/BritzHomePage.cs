@@ -1,6 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
 namespace TestForTHL
 {
@@ -35,6 +36,12 @@ namespace TestForTHL
         internal void Close()
         {
             Driver.Quit();
+        }
+
+        internal void BookButtonClick()
+        {
+            Driver.FindElement(By.XPath("//button/span[contains(text(), 'Book')]")).Click();
+            //Driver.FindElement(By.XPath("//button[@data-toggle='bookingComponentAlt']/svg")).Click();
         }
     }
 }

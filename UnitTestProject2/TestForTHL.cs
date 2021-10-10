@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
+
 namespace TestForTHL
 {
     [TestClass]
@@ -53,6 +54,14 @@ namespace TestForTHL
             Assert.AreEqual("Campervan Hire Australia", BritzAustralia.BritzHomePageBanner);
             BritzHomePage.Close();
 
+        }
+
+        [TestMethod]
+        public void ClickOnBookButton()
+        {
+            var BritzHomePage = new BritzHomePage(driver);
+            BritzHomePage.Open();
+            BritzHomePage.BookButtonClick();
         }
 
     }
