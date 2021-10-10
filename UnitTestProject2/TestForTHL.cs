@@ -49,7 +49,7 @@ namespace TestForTHL
             var BritzHomePage = new BritzHomePage(driver);
             BritzHomePage.Open();
             var BritzAustralia = BritzHomePage.ClickOnBritzAustraliaLink();
-            //Verify Britz Australia's home page is loaded by checking the banner
+            //Verify Britz Australia's home page is loaded by verifying the banner
             Assert.AreEqual("Campervan Hire Australia", BritzAustralia.BritzHomePageBanner);
             BritzHomePage.Close();
 
